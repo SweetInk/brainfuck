@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Interpreter {
     private int pc;//program counter
     private int dp;//data pointer
-    private char[] souce;//source code
+    private char[] source;//source code
     private int[] memory;//memory space
     private StringBuilder result;
     private boolean termimal = false;//flag for program is running
@@ -17,7 +17,7 @@ public class Interpreter {
     Scanner scanner = new Scanner(System.in);// SYSTEM INPUT
 
     public Interpreter(String src) {
-        this.souce = src.toCharArray();
+        this.source = src.toCharArray();
         int MEMORY_LIMIT = 4096;
         this.memory = new int[MEMORY_LIMIT];
         this.pc = 0;
@@ -64,15 +64,15 @@ public class Interpreter {
     }
 
     private char opcode() {
-        if (pc >= souce.length || pc < 0) {
+        if (pc >= source.length || pc < 0) {
             termimal = true;
             return 0;
         }
-        return souce[pc];
+        return source[pc];
     }
 
     public void run() {
-        while (pc < souce.length && !termimal) {
+        while (pc < source.length && !termimal) {
             char opcode = opcode();
             switch (opcode) {
                 case Opcode.PTR_ADD:
@@ -106,7 +106,7 @@ public class Interpreter {
             }
             pc++;
         }
-        System.out.println(result.toString());
+        //System.out.println(result.toString());
     }
 
     public static void main(String[] args) throws IOException {
