@@ -1,3 +1,5 @@
+package online.githuboy.bf;
+
 import java.io.IOException;
 import java.util.Scanner;
 

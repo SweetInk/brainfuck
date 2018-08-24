@@ -1,3 +1,5 @@
+package online.githuboy.bf;
+
 /**
  * @author suchu
  * @since 2018/8/23 10:22
