@@ -22,4 +22,4 @@ The brainfuck language uses a simple machine model consisting of the program and
 
 # Reference
 
-[Wikipedia]('https://en.wikipedia.org/wiki/Brainfuck')
+[Wikipedia](https://en.wikipedia.org/wiki/Brainfuck)
